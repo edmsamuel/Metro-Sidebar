@@ -9,10 +9,6 @@ html, body {
 .Sans {
   font-family: "SansProRegular", sans-serif !important; }
 
-.OpenSans{
-  font-family: 'Open Sans', sans-serif !important;
-}
-
 .Light {
   font-family: "ColaborateLight", sans-serif !important; }
 
@@ -23,6 +19,9 @@ html, body {
   background-color: #2F3847;
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex; }
 
 .Overlay {
@@ -36,14 +35,32 @@ html, body {
   min-width: 250px;
   overflow-x: hidden;
   height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   position: fixed;
+  -webkit-transform: translateX(-245px);
+  -ms-transform: translateX(-245px);
   transform: translateX(-245px);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.22, 0.61, 0.36, 1) 0.05s;
   transition: transform 0.3s cubic-bezier(0.22, 0.61, 0.36, 1) 0.05s; }
   .Sidebar.Expanded {
+    -webkit-transform: translateX(0px);
+    -ms-transform: translateX(0px);
     transform: translateX(0px); }
   .Sidebar::-webkit-scrollbar {
     width: 0px !important; }
@@ -55,8 +72,18 @@ html, body {
 .Sidebar .User {
   margin-top: 20px;
   margin-bottom: 30px;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
+  -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
   color: #2c2f36; }
   .Sidebar .User img {
@@ -70,16 +97,15 @@ html, body {
   .Sidebar .Items .Item:hover {
     color: #2c2f36; }
 
-.Sidebar .Items .Item.Avatar {
-  width: 100%; }
-  .Sidebar .Items .Item.Avatar .User img {
-    width: 95%;
-    height: 95%;
-    border-radius: 50%;
-    padding-left: 2.5%; }
-
 .Body {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
+  -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
   flex-direction: column;
   font-family: "ColaborateLight", sans-serif !important;
   padding-left: 20px;
@@ -90,7 +116,7 @@ html, body {
 .OpenSans.Header h1 {
   color: white; }
   .OpenSans.Header h1 small {
-    color: #6d7d98; }
+    color: #7d8eac; }
 @media screen and (max-width: 640px) {
   .OpenSans.Header {
     margin-bottom: 10px; } }
@@ -99,6 +125,9 @@ html, body {
     margin-bottom: 5px; } }
 
 .Body .Titles {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex; }
   .Body .Titles .Item {
     color: #4c5c77;
@@ -109,8 +138,15 @@ html, body {
     color: #7d8eac; }
 
 .Body .Cards {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-align-content: space-between;
+  -ms-flex-line-pack: justify;
   align-content: space-between; }
   .Body .Cards .Item {
     height: 205px;
